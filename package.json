@@ -4,14 +4,21 @@
   "module": "dist/react-fitty.esm.js",
   "keywords": ["fitty", "react", "react-fitty"],
   "repository": "https://github.com/morhogg/react-fitty",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/react-fitty.esm.js",
-      "require": "./dist/index.js"
+      "import": {
+        "types":"./dist/index.d.ts",
+        "default":"./dist/react-fitty.esm.js"
+      },
+      "require": {
+        "types":"./dist/index.d.ts",
+        "default":"./dist/index.js"
+      }
     }
   },
   "files": [
